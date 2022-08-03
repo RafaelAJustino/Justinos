@@ -1,0 +1,201 @@
+@media screen and (max-width: 1200px) {
+    body {
+        max-width: 1100px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    body {
+        max-width: 900px;
+    }
+
+    section {
+        margin-top: 80px !important;
+    }
+
+    #projects {
+        width: auto;
+        flex-wrap: wrap;
+        height: 100%;
+        justify-content: center;
+        gap: 20px;
+        max-height: none;
+    }
+
+    #projects .div {
+        flex: none;
+        width: 100%;
+        max-width: 400px;
+        height: 400px;
+    }
+
+    #projects .div:hover {
+        flex: none;
+    }
+
+    #projects .proj {
+        font-family: Brush Script MT, Brush Script Std, cursive;
+        font-size: 42px;
+        height: 250px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: transparent;
+        transition: .3s;
+    }
+
+    #projects .proj:hover {
+        color: white;
+        animation: neon 4s infinite;
+    }
+
+    #projects img {
+        flex: none;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    #projects img:hover {
+        flex: none;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        max-width: 700px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .hamburguer {
+        display: block;
+    }
+
+    header .nav-menu {
+        display: none;
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        right: -100%;
+        top: 71.5px;
+        background-color: rgb(34, 34, 34);
+    }
+
+    header .nav-menu ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        justify-content: space-around;
+        text-align: end;
+    }
+
+    header .nav-menu li {
+        margin: 0;
+        padding: 10px 0px;
+    }
+
+    header .nav-menu a {
+        margin: 0px 20px;
+        border-bottom: 1px solid white;
+    }
+
+    header .hidden {
+        right: 0px;
+        transition-duration: .25s;
+        display: block;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    #home {
+        flex-direction: column;
+    }
+
+    #home article {
+        /* display: none; */
+        margin-top: 20px;
+    }
+
+    #skill .progress-line {
+        width: 80%;
+    }
+
+    #projects {
+        max-width: 400px;
+        max-height: none;
+        flex-direction: column;
+    }
+
+    #curriculo {
+        margin: 0 auto;
+        margin-bottom: 20px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid black;
+    }
+
+    #curriculo::after {
+        width: 24px;
+        margin-left: 8px;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 456px) {
+    body {
+        max-width: 300px;
+    }
+
+    #home {
+        font-size: 20px;
+    }
+
+    #home span {
+        font-size: 38px;
+    }
+
+    #home .flip-card {
+        /* display: none; */
+        margin-top: 30px;
+        width: 300px;
+        height: 300px;
+    }
+
+    #home .flip-card img {
+        width: 300px !important;
+        height: 300px !important;
+    }
+
+    #skill .progress-line {
+        width: 100%;
+    }
+
+    #projects {
+        max-height: none;
+    }
+
+    #projects .proj {
+        flex: none;
+        width: 100%;
+        max-width: 400px;
+        height: 240px;
+    }
+
+    #projects .proj:hover {
+        flex: none;
+    }
+}

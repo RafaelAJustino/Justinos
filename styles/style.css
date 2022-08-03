@@ -1,0 +1,413 @@
+:root {
+    --primary: #ffde3a;
+    --secondary: #3c3d20;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:target {
+    scroll-margin-top: 80px;
+}
+
+body {
+    background-color: rgb(34, 34, 34);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+}
+
+.scroll {
+    opacity: 0;
+    transform: translate3d(-100px, 0, 0);
+    transition: 0.3s;
+}
+
+.scroll-start {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    background-color: rgb(34, 34, 34);
+}
+
+header ul {
+    list-style: none;
+}
+
+header li {
+    display: inline-block;
+    margin: 0px 20px;
+    color: white;
+    font-weight: bold;
+}
+
+header li:hover {
+    text-shadow:
+        white 0 0 12px,
+        var(--primary) 0 0 28px,
+        var(--primary) 0 0 40px;
+    transition: all 0.3s;
+}
+
+.hamburguer {
+    display: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.hamburguer .line {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: white;
+    margin-block: 10px;
+    border-radius: 4px;
+    transition: transform 0.5s, opacity 0.25s;
+}
+
+.hamburguer.active .line:nth-child(1) {
+    transform: translateY(13px) rotate(45deg);
+}
+
+.hamburguer.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburguer.active .line:nth-child(3) {
+    transform: translateY(-13px) rotate(-45deg);
+}
+
+section {
+    display: flex;
+    padding: 0px 30px;
+    margin-top: 80px !important;
+}
+
+#home {
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px !important;
+}
+
+#home span {
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    animation: neon 5s infinite;
+    font-size: 48px;
+}
+
+#home .links {
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+#home .links a {
+    margin-right: 20px;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    filter: drop-shadow(0 0 1px #fff);
+    border-radius: 100%;
+}
+
+#home .links a:hover {
+    /* filter: drop-shadow(0 0 5px var(--primary)); */
+    filter: drop-shadow(0 0 5px var(--primary));
+}
+
+#home .linkedin img,
+#home .github img {
+    width: 40px;
+    height: 40px;
+}
+
+/* #home article {
+    animation: move 5s linear infinite;
+} */
+
+#home .flip-card {
+    background-color: transparent;
+    width: 380px;
+    height: 380px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+#home .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform .3s;
+    transform-style: preserve-3d;
+}
+
+#home .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+#home .flip-card-front,
+#home .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+#home .flip-card-back {
+    transform: rotateY(180deg);
+}
+
+
+#about {
+    display: flex;
+    flex-direction: column;
+}
+
+#about span {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    animation: neon 4s infinite;
+    margin-right: 5px;
+    line-height: 0;
+}
+
+#skill {
+    display: flex;
+    flex-direction: column;
+}
+
+#skill .which {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#skill .progress-line {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+#skill .progress-line .progress {
+    background-color: #2e2e2e;
+    height: 10px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+#skill .progress-line .progress .progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: white;
+    position: relative;
+    transition: all 1.5s;
+    animation: neon2 4s infinite;
+    border-radius: 10px;
+}
+
+#projects {
+    width: 85vw;
+    height: 68vmin;
+    max-height: 500px;
+    display: flex;
+    gap: 5px;
+    margin: 0 auto;
+}
+
+#projects div {
+    background-color: #3c3d20;
+    display: grid;
+    position: relative;
+    height: 100%;
+    flex: 1;
+    object-fit: cover;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s;
+    align-items: center;
+}
+
+#projects div:hover {
+    flex: 4;
+    box-shadow:
+        white 0 0 12px,
+        var(--primary) 0 0 24px,
+        var(--primary) 0 0 36px;
+    z-index: 80;
+}
+
+#projects .proj {
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 42px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;
+    transition: .3s;
+}
+
+#projects .proj:hover {
+    color: white;
+    animation: neon 4s infinite;
+}
+
+#projects img {
+    display: grid;
+    position: relative;
+    height: 100%;
+    flex: 1;
+    object-fit: cover;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+#projects img:hover {
+    flex: 4;
+    box-shadow:
+        white 0 0 12px,
+        var(--primary) 0 0 24px,
+        var(--primary) 0 0 36px;
+}
+
+footer {
+    position: absolute;
+    max-width: none;
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+    margin-top: 20px;
+    width: 100%;
+    left: 0;
+}
+
+footer p {
+    color: black;
+}
+
+#curriculo {
+    display: flex;
+    color: black;
+    width: 100px;
+    height: 20px;
+    align-items: center;
+    transition: .3s ease;
+}
+
+#curriculo::after {
+    content: '';
+    display: block;
+
+
+    width: 0px;
+    height: 20px;
+    overflow: hidden;
+    background-image: url('/components/images/download.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 20px;
+    transition: width .3s, margin-left .3s;
+}
+
+#curriculo:is(:hover, :focus)::after {
+    width: 24px;
+    margin-left: 8px;
+}
+
+#curriculo:hover {
+    font-weight: bold;
+}
+
+footer .social-medias {
+    display: flex;
+    gap: 20px;
+}
+
+footer img {
+    width: 40px;
+    height: 40px;
+    transition: all .3s ease-in-out;
+}
+
+footer img:hover {
+    filter: invert(100%);
+    transform: scale(0.8);
+}
+
+@keyframes neon {
+
+    0%,
+    39%,
+    41%,
+    59%,
+    61%,
+    100% {
+        text-shadow:
+            white 0 0 12px,
+            var(--primary) 0 0 24px,
+            var(--primary) 0 0 36px;
+    }
+
+    40%,
+    60% {
+        text-shadow: none;
+    }
+}
+
+@keyframes neon2 {
+
+    0%,
+    39%,
+    41%,
+    59%,
+    61%,
+    100% {
+        box-shadow:
+            white 0 0 12px,
+            var(--primary) 0 0 24px,
+            var(--primary) 0 0 36px;
+    }
+
+    /* 40%,
+    60% {
+        box-shadow: none;
+    } */
+}
+
+
+
+@keyframes move {
+    25% {
+        transform: translate(-5px, 5px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
