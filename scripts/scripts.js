@@ -77,7 +77,7 @@ function skill(){
         '60%',
         '53%',
         '45%',
-        '55%',
+        '50%',
     ];
     progressBars.forEach((progress,index)=>{
         progress.style.width = values[index];
@@ -90,7 +90,7 @@ function cancelSkill(){
         '60%',
         '53%',
         '45%',
-        '55%',
+        '50%',
     ];
     progressBars.forEach((progress,index)=>{
         progress.style.width = '0%';

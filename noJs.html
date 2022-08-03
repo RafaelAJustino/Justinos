@@ -17,12 +17,14 @@
 
 <body>
     <header>
-        <h1>JUSTINO's</h1>
-        <button type="button" class="hamburguer">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-        </button>
+        <div>
+            <h1>JUSTINO's</h1>
+            <button type="button" class="hamburguer">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </div>
         <nav class="nav-menu">
             <ul>
                 <a href="#home">
@@ -39,14 +41,28 @@
                 </a>
             </ul>
         </nav>
+
+        <noscript id="nav-no-script">
+            <nav class="nav-menu-no-script">
+                <ul>
+                    <a href="#home">
+                        <li>Início</li>
+                    </a>
+                    <a href="#about">
+                        <li>Sobre</li>
+                    </a>
+                    <a href="#skill">
+                        <li>Habilidades</li>
+                    </a>
+                    <a href="#projects">
+                        <li>Projetos</li>
+                    </a>
+                </ul>
+            </nav>
+        </noscript>
     </header>
 
-    <noscript id="link-no-script">
-        <p><span>Por favor ative o Javascript</span></p>
-        <p>Ou então navegue até esta pagina <a href="./noJs.html">Justino`s</a></p>
-    </noscript>
-
-    <section id="home" class="scroll">
+    <section id="home" class=".scroll-start">
         <aside>
             <h2>Oi, eu sou</h2>
             <h2><span>Rafael Justino</span></h2>
@@ -72,7 +88,7 @@
         </article>
     </section>
 
-    <section id="about" class="scroll">
+    <section id="about" class=".scroll-start">
         <p><span>Me</span> chamo Rafael Angelo Justino, sou graduando do curso de Análise e Desenvolvimento de Sistemas
             pela Universidade Tecnológica Federal do Parná (UTFPR) desde 2020, porém foi em 2018 no curso de Engenharia
             de Controle e Automação que comecei a conhecer mais profundamente a programação e decidi que com isso
@@ -88,7 +104,7 @@
 
     </section>
 
-    <section id="skill" class="scroll">
+    <section id="skill" class=".scroll-start">
         <div class="progress-box">
             <div class="progress-line">
                 <div class="which">
@@ -96,7 +112,7 @@
                     <p>60%</p>
                 </div>
                 <div class="progress">
-                    <div class="progress-bar">
+                    <div class="progress-bar" style="width: 60%;">
                     </div>
                 </div>
             </div>
@@ -107,7 +123,7 @@
                 </div>
                 <div class="progress">
                     <p></p>
-                    <div class="progress-bar">
+                    <div class="progress-bar" style="width: 53%;">
                     </div>
                 </div>
             </div>
@@ -117,24 +133,24 @@
                     <p>45%</p>
                 </div>
                 <div class="progress">
-                    <div class="progress-bar">
+                    <div class="progress-bar" style="width: 45%;">
                     </div>
                 </div>
             </div>
             <div class="progress-line">
                 <div class="which">
                     <p>React JS.</p>
-                    <p>55%</p>
+                    <p>50%</p>
                 </div>
                 <div class="progress">
-                    <div class="progress-bar">
+                    <div class="progress-bar" style="width: 50%;">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="scroll">
+    <section id="projects" class=".scroll-start">
         <div>
             <p class="proj">Em Breve</p>
         </div>
@@ -162,9 +178,6 @@
                     src="./components/images/github.png" alt="github"></a>
         </div>
     </footer>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript" src="./scripts/scripts.js"></script>
 
 </body>
 

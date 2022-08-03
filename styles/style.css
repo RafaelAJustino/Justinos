@@ -24,13 +24,33 @@ a {
     text-decoration: none;
 }
 
+#link-no-script {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#link-no-script span {
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    animation: neon 5s infinite;
+    font-size: 48px;
+}
+
+#link-no-script a {
+    color: var(--primary);
+}
+
 .scroll {
+    /* display: none !important; */
     opacity: 0;
     transform: translate3d(-100px, 0, 0);
     transition: 0.3s;
 }
 
 .scroll-start {
+    /* display: flex; */
     opacity: 1;
     transform: translate3d(0, 0, 0);
 }
@@ -63,6 +83,10 @@ header li:hover {
         var(--primary) 0 0 28px,
         var(--primary) 0 0 40px;
     transition: all 0.3s;
+}
+
+#nav-no-script {
+    display: none;
 }
 
 .hamburguer {
@@ -399,8 +423,6 @@ footer img:hover {
         box-shadow: none;
     } */
 }
-
-
 
 @keyframes move {
     25% {
